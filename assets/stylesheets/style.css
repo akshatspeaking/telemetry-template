@@ -108,7 +108,7 @@ header nav a {
   color: rgba(255, 255, 255, 0.884);
 }
 .hero {
-  background-image: url(pic01.jpg);
+  background-image: url(../images/pic01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
