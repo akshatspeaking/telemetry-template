@@ -41,7 +41,7 @@ header {
    display: flex;
    flex-flow: row nowrap;
    justify-content: space-between;
-   align-items: center;
+   // align-items: center;
 
    .logo {
       font-size: 1.8rem;
@@ -61,12 +61,12 @@ header {
          text-decoration: none;
          color: $white;
       }
-      .dropdown {
-         &:hover{
+      // .dropdown {
+      //    &:hover{
             
-         }
-      }
+      //    }
    }
+   
 }
 
 .hero {
@@ -238,25 +238,44 @@ header {
 
 .sec4 {
    // height: 70vh;
-   .imgflex {
-      display: flex;
-      flex-flow: row nowrap;
-   }
-   img {
-      width: 50%;
-      border-radius: 0;
+   // .imgflex {
+   //    display: flex;
+   //    flex-flow: row nowrap;
+   // }
+   // img {
+   //    width: 50%;
+   //    border-radius: 0;
 
-   }
-   .sec4text {
-      position: absolute;
-      margin: 0 auto;   
-      text-align: center;
-      align-items: center;
-   }
-   .sec4box {
+   // }
+   // .sec4text {
+   //    position: absolute;
+   //    margin: 0 auto;   
+   //    text-align: center;
+   //    align-items: center;
+   // }
+   // .sec4box {
+   //    width: 50%;
+   //    text-align: center;
+   // }
+
+   display: flex;
+   flex-flow: row nowrap;
+   .quotebox {
       width: 50%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
       text-align: center;
    }
+
+   .q1 {
+      background: url("../images/pic03.jpg");
+   }
+   .q2 {
+      background: url("../images/pic04.jpg");
+   }
+
    h2{
       color: $white;
       font-size: 2rem;
@@ -275,8 +294,8 @@ header {
       height: 6rem;
       width: 6rem;
       font-size: 3rem;
-      // display: grid;
-      // place-items: center;
+      display: grid;
+      place-items: center;
       background-color: $baseRed;
       color: $white;
 
@@ -300,10 +319,13 @@ header {
 
  }
 
- .progress {
-    color: $black;   
+ .progress[max] {
+    background-color: $white;   
  }
 
+ .progress[value] {
+   background-color: $baseRed;   
+}
 
 
 .info {
@@ -386,3 +408,108 @@ small {
    display: block;
    text-align: center;
 }
+
+
+@media screen and (max-width: 768px) {
+   html {
+      font-size: 10px;
+   }
+   nav {
+      display: none !important;
+   }
+   .hero {
+      padding-top: 5rem !important;
+  
+      .btn {
+         font-size: 1.4rem;
+      }
+   }
+   
+   .one-img {
+      width: 80% !important;
+      order: 1;
+   }
+   .one-text {
+      // height: 80vh;
+      width: 100% !important;
+      display: flex;
+      flex-flow: column nowrap;
+      // justify-content: space-evenly;
+      // padding-left: 5rem;
+   }
+   .box {
+      width: 100% !important;
+      display: flex;
+      border: 1px solid grey;
+      padding: 2rem;
+      border: none !important;
+   }
+   .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+   }
+
+   .sec2 {
+      text-align: center;
+      padding: 8rem 0;
+      color: $white;
+      background-color: $baseRed;
+      h2 {
+         font-size: 3rem;
+      }
+      h3{
+         font-size: 1.5rem;
+         font-weight: 400;
+         margin: 2rem 0;
+      }
+      .row {
+         width: 80% !important;
+         // border-right: 1px solid $white;
+         // padding-right: 2rem;
+         padding: none !important;
+         border: none !important;
+         border-bottom: 1px solid $white !important;
+         padding-bottom: 5rem !important;
+         margin-bottom: 5rem !important;
+      }
+      .row:last-child {
+         border: none;
+      }
+   }
+
+   // display: flex;
+   // flex-flow: column nowrap !important;
+   .quotebox {
+      width: 100% !important;
+      height: 30vh;
+
+   }
+   .sec4 {
+      flex-direction: column;
+   }
+   
+   .flexcol {
+      width: 90% !important;
+      justify-content: space-between;
+      // align-items: center;
+   }
+
+   .infobox {
+      width: 100% !important;
+   }
+
+   input {
+      width: 80% !important;
+   }
+   .sec5 {
+      .flexrow {
+         flex-direction: column;
+         width: 100% !important;
+      }
+   }
+}
+
