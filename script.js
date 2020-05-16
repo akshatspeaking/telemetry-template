@@ -14,7 +14,7 @@ document.addEventListener("scroll", (e) => {
    let offset = window.scrollY;
    hero.style.backgroundPositionY = -offset * 0.5 + "px";
 
-   if (scrollY >= 848) {
+   if (scrollY >= 448) {
       header.style.backgroundColor = "#ff887bdc";
    }
    else {

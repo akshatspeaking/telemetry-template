@@ -37,7 +37,7 @@ img {
 header {
    padding: 1rem 0;
    background: transparent;
-   position: absolute;
+   position: fixed;
    top: 0;
    right: 0;
    left: 0;
@@ -46,7 +46,7 @@ header {
    display: flex;
    flex-flow: row nowrap;
    justify-content: space-between;
-   // align-items: center;
+   align-items: center;
 
    .logo {
       font-size: 1.8rem;
@@ -382,9 +382,9 @@ header {
 
 }
 
-// .fa-bars {
-//    display: none;
-// }
+#hamburger-icon {
+   display: none;
+}
 .progress{
    margin-left: 2rem;
    span {
@@ -455,8 +455,8 @@ header {
    width: 3rem;
    border-radius: 10px;
    margin-right: 1rem;
-   display: grid;
-   place-items: center;
+   display: grid !important;
+   place-items: center !important;
 
    &:hover {
       background-color: rgba($white, 0.5);

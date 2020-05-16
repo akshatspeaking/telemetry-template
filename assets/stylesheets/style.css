@@ -84,7 +84,7 @@ img {
 header {
   padding: 1rem 0;
   background: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -93,6 +93,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 header .logo {
   font-size: 1.8rem;
@@ -364,6 +365,10 @@ header .desktopnav ul a {
   color: rgba(255, 255, 255, 0.884);
 }
 
+#hamburger-icon {
+  display: none;
+}
+
 .progress {
   margin-left: 2rem;
 }
@@ -425,8 +430,8 @@ header .desktopnav ul a {
   width: 3rem;
   border-radius: 10px;
   margin-right: 1rem;
-  display: grid;
-  place-items: center;
+  display: grid !important;
+  place-items: center !important;
 }
 .contact-nav > *:hover {
   background-color: rgba(255, 255, 255, 0.5);
