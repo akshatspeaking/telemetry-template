@@ -20,15 +20,39 @@ document.addEventListener("scroll", (e) => {
    else {
       header.style.backgroundColor = "transparent";
    }
-   console.log(scrollY);
+   // console.log(scrollY);
 })
 
 document.querySelectorAll(".radiobtn").forEach(x => {
+   
+   document.querySelectorAll(".radiobtn").forEach(x => {x.classList.remove("selected")})
+   // document.querySelectorAll(".radiobtn").forEach(x => {x.style.border = "1px solid black"})
+   
    x.addEventListener("click", (e) => {
-      document.querySelectorAll(".radiobtn").forEach(x => {x.style.border = "1px solid black"})
-      e.target.style.border = "none";
-      document.querySelector(".editheading").innerText = "Lorem Ipsum One"
-      document.querySelector(".edittext").innerText = "lorem ipsum lorem ipsum"
+      
+      e.target.classList.add("selected");
+         if (e.target.classList.contains("rb1")){
+            document.querySelector(".editheading").innerText = "Lorem Ipsum One"
+            document.querySelector(".edittext").innerText = "lorem ipsum lorem ipsum"      
+         } else if (e.target.classList.contains("rb2")){
+            document.querySelector(".editheading").innerText = "Lorem Ipsum Two";
+            document.querySelector(".edittext").innerText = "lorem ipsum lorem ipsum lorem lorem lorem";
+         } else if (e.target.classList.contains("rb3")){
+            document.querySelector(".editheading").innerText = "Lorem Ipsum Three";
+            document.querySelector(".edittext").innerText = "lorem ipsum lorem ipsum lorem lorem lorem lorem ipsum lorem ipsum";
+         }         
+      
       
    })
 })
+
+
+// on click on any radiobtns,
+// remove selected from all radiobtns
+//    add class of selected to clicked rb
+//    if rb1, change inner text to one
+//    if rb2, change inner text to one
+//    if rb3, change inner text to one
+
+
+// in CSS, for selected, remove bottom border, change bg color
