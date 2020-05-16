@@ -16,12 +16,51 @@
          <span class="byline"> By Pixelarity</span>
       </div>
       <nav>
-         <a href="#">Home</a>
-         <a href="#" class="dropdown">
-            <i class="fas fa-chevron-down"></i>
-            Dropdown</a>
-         <a href="#">Generic</a>
-         <a href="#">Elements</a>
+         <ul>
+            <li>
+               <a href="#">Home</a>
+            </li>
+            <li>
+               <a href="#" class="dropdown">
+               <i class="fas fa-chevron-down"></i>
+               Dropdown
+               </a>
+                  <ul class="submenu">
+                     <li>
+                        <a href="#">Option 1</a>
+                     </li>
+                     <li>
+                        <a href="#">Option 2</a>
+                     </li>
+                     <li>
+                        <a href="#">Option 3</a>
+                     </li>
+                     <li>
+                        <a href="#">Submenu</a>
+                        <ul  class="submenu">
+                           <li>
+                              <a href="#">Option 1</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 2</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 3</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 4</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+            </li>
+            <li>
+               <a href="#">Generic</a>
+            </li>
+            <li>
+               <a href="#">Elements</a>
+            </li>
+         </ul>
       </nav>
    </header>
    <main>
@@ -100,7 +139,27 @@
          </div>
       </section>
       <section class="sec3">
-
+         <div class="container s3container">
+            <div class="btnrow">
+               <button class="radiobtn rb1">
+                  Lorem
+               </button><!--
+            --><button class="radiobtn rb2">
+                  Lorem
+               </button><!--
+               --><button class="radiobtn rb3">
+                  Lorem
+               </button>
+            </div>
+            <div class="s3content">
+               <div class="flexcol">
+                  <h2 class="editheading">Lorem ipsum dolor sit magna feugiat etiam sed dolor</h2>
+                  <p class="edittext">Maecenas id feugiat nunc. Integer gravida augue libero, quis pellentesque amet pharetra a. Ut sagittis ipsum nec velit porttitor, sed convallis ligula pellentesque. Mauris et dignissim sem lacinia lorem ipsum dolor.</p>
+                  <button class="btn">Learn More</button>
+               </div>
+               <img src="assets/images/pic03.jpg" alt="">
+            </div>
+         </div>
       </section>
       <section class="sec4">
 
@@ -184,7 +243,7 @@
                      <p>info@untitled.tld</p>
                   </div>
                </div>
-               <nav>
+               <nav class="contact-nav">
                   <i class="far fa-gem"></i>
                   <i class="far fa-gem"></i>
                   <i class="far fa-gem"></i>

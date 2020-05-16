@@ -78,9 +78,8 @@ img {
 }
 
 header {
-  padding: 1rem 0;
   background: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -97,20 +96,15 @@ header .logo {
 header .byline {
   font-size: 1.2rem;
 }
-header nav ul {
+header nav {
   width: 30vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
-header nav ul a {
+header nav a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.884);
-}
-
-.submenu {
-  display: none;
-  position: relative;
 }
 
 .hero {
@@ -120,10 +114,6 @@ header nav ul a {
   display: grid;
   place-items: center;
   padding-bottom: 20rem;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .hero-box {
@@ -252,43 +242,7 @@ header nav ul a {
 }
 
 .sec3 {
-  padding: 5rem 0;
   background-color: rgba(255, 255, 255, 0.884);
-}
-.sec3 .btnrow {
-  display: flex;
-}
-.sec3 .btnrow button {
-  border-right: 1px solid rgba(165, 165, 165, 0.89);
-  border-radius: 0;
-  padding: 1rem 3rem;
-  border-bottom: none;
-}
-.sec3 .s3container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-}
-.sec3 .s3content {
-  display: flex;
-  justify-content: space-evenly;
-  line-height: 1.4;
-}
-.sec3 .s3content img {
-  padding-left: 10%;
-  width: 40%;
-  border-radius: 10px;
-}
-.sec3 .s3content .flexcol {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 50%;
-}
-.sec3 .s3content .flexcol h2 {
-  margin-top: 1rem;
-  font-size: 2.5rem;
-  padding-bottom: 2rem;
-  font-weight: 100;
 }
 
 .leftinfo {
@@ -301,33 +255,18 @@ header nav ul a {
   padding-bottom: 2rem;
   font-weight: 100;
 }
-.leftinfo img {
-  margin: 1rem 0;
-}
 
 .progress {
   justify-content: space-evenly;
 }
 .sec4 {
-  display: flex;
-  flex-flow: row nowrap;
-}
-.sec4 .quotebox {
-  padding: 10rem 0;
-  width: 50%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 50rem 0;
 }
 .sec4 .q1 {
-  background: url("../images/pic03.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/pic03.jpg") 0 0 cover;
 }
 .sec4 .q2 {
-  background: url("../images/pic04.jpg");
-  background-repeat: no-repeat;
+  background: url("../images/pic04.jpg") 0 0 cover;
 }
 .sec4 h2 {
   color: rgba(255, 255, 255, 0.884);
@@ -353,15 +292,7 @@ header nav ul a {
   color: rgba(255, 255, 255, 0.884);
 }
 
-.progress {
-  margin-left: 2rem;
-}
-.progress span {
-  margin-bottom: 2rem;
-}
-
 .file {
-  margin: 1rem 0 1rem 0;
   /* Reset the default appearance */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -373,12 +304,12 @@ header nav ul a {
   height: 2px;
 }
 
-.file[max] {
-  background-color: #ff887b;
+.progress[max] {
+  background-color: rgba(255, 255, 255, 0.884);
 }
 
-.file[value] {
-  background-color: rgba(165, 165, 165, 0.89);
+.progress[value] {
+  background-color: #ff887b;
 }
 
 .info {
@@ -386,53 +317,28 @@ header nav ul a {
 }
 
 .sec5 {
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.884);
   color: rgba(0, 0, 0, 0.76);
-}
-.sec5 button {
-  margin-top: 2rem;
-  border-color: rgba(0, 0, 0, 0.76);
-  color: rgba(0, 0, 0, 0.76);
-  width: 30%;
-  padding: 1rem;
-}
-
-.contact-nav {
-  display: flex;
-}
-
-.contact-nav > * {
-  border: 1px solid rgba(255, 255, 255, 0.884);
-  height: 3rem;
-  width: 3rem;
-  border-radius: 10px;
-  margin-right: 1rem;
-  display: grid;
-  place-items: center;
+  padding-top: 5rem;
 }
 
 .contact {
   padding: 5rem;
   background-color: #ff887b;
   color: rgba(255, 255, 255, 0.884);
+  height: 100vh;
 }
 .contact button {
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  width: 30%;
-  padding: 1rem;
+  border: 1px solid rgba(165, 165, 165, 0.89);
 }
 .contact h2 {
   font-size: 2.5rem;
   padding-bottom: 2rem;
 }
 .contact .infobox {
-  display: flex;
   padding: 1rem 0;
   width: 50%;
-}
-.contact .infobox i {
-  margin-right: 1rem;
-  padding-top: 0.25rem;
 }
 .contact input {
   display: inline-block;
@@ -443,7 +349,7 @@ header nav ul a {
 }
 .contact .contact-form input, .contact .contact-form textarea {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(165, 165, 165, 0.89);
   border-radius: 5px;
 }
 .contact .contact-form input {
@@ -472,7 +378,7 @@ header nav ul a {
 }
 
 .footerline {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(165, 165, 165, 0.89);
   margin: 2rem 0;
 }
 
@@ -495,12 +401,6 @@ small {
   }
   .hero .btn {
     font-size: 1.4rem;
-  }
-
-  .contact-nav {
-    display: flex !important;
-    margin: 0 auto;
-    margin-bottom: 2rem;
   }
 
   .one-img {
@@ -582,50 +482,6 @@ small {
   .sec5 .flexrow {
     flex-direction: column;
     width: 100% !important;
-  }
-
-  .contact-form button {
-    margin: 0 auto;
-    width: 60%;
-  }
-  .contact-form .flexrow {
-    flex-direction: column;
-  }
-  .contact-form .flexrow input {
-    width: 95% !important;
-    margin: 0 auto;
-    margin-top: 1rem;
-  }
-
-  .contact-info .info {
-    padding-bottom: 1rem !important;
-  }
-
-  .radiobtn {
-    width: 33% !important;
-    margin-left: 1.2rem;
-  }
-
-  .s3content {
-    padding-right: 0 !important;
-    text-align: center;
-    flex-direction: column;
-  }
-  .s3content button {
-    margin: 0 auto;
-  }
-  .s3content .flexcol {
-    order: 1;
-  }
-  .s3content img {
-    width: 90% !important;
-    margin: 0 auto;
-    padding-left: 0 !important;
-  }
-  .s3content .btnrow {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
   }
 }
 
