@@ -3,17 +3,23 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FONTAWESOME -->
    <script defer src="https://kit.fontawesome.com/eed1a7f245.js" crossorigin="anonymous"></script>
+   <!-- GOOGLE FONTS -->
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-   <script defer src="script.js"></script>
+   <!-- JAVASCRIPT -->
+   <script defer src="assets/script.js"></script>
+   <!-- CSS -->
    <link rel="stylesheet" href="assets/stylesheets/style.css">
    <title>Telemetry - Pixelarity</title>
 </head>
 <body>
+   <!-- Header -->
    <header id="header">
-      <div>
+      <div><a href="#">
          <span class="logo">Telemetry |</span>
          <span class="byline"> By Pixelarity</span>
+      </a>
       </div>
       <label for="bars">
          <i class="fas fa-bars" id="hamburger-icon"></i>
@@ -66,55 +72,10 @@
             </li>
          </ul>
       </nav>
-      <nav class="mobilenav">
-         <ul>
-            <li>
-               <a href="#">Home</a>
-            </li>
-            <li>
-               <a href="#" class="dropdown">
-               <i class="fas fa-chevron-down"></i>
-               Dropdown
-               </a>
-                  <ul class="submenu">
-                     <li>
-                        <a href="#">Option 1</a>
-                     </li>
-                     <li>
-                        <a href="#">Option 2</a>
-                     </li>
-                     <li>
-                        <a href="#">Option 3</a>
-                     </li>
-                     <li>
-                        <a href="#">Submenu</a>
-                        <ul  class="submenu">
-                           <li>
-                              <a href="#">Option 1</a>
-                           </li>
-                           <li>
-                              <a href="#">Option 2</a>
-                           </li>
-                           <li>
-                              <a href="#">Option 3</a>
-                           </li>
-                           <li>
-                              <a href="#">Option 4</a>
-                           </li>
-                        </ul>
-                     </li>
-                  </ul>
-            </li>
-            <li>
-               <a href="#">Generic</a>
-            </li>
-            <li>
-               <a href="#">Elements</a>
-            </li>
-         </ul>
-      </nav>
+      
    </header>
    <main>
+      <!-- Hero section -->
       <section class="hero">
          <div class="hero-box">
             <i class="fas fa-laptop"></i>
@@ -125,6 +86,7 @@
             <button id="herobtn" class="btn">Get Started</button>
          </div>
       </section>
+      <!-- Primary Section -->
       <section class="sec1">
          <div class="container">
             <div class="one-img">
@@ -165,6 +127,7 @@
          </div>
          </div>
       </section>
+      <!-- Section 2 -->
       <section class="sec2">
          <div class="container">
             <div class="row">
@@ -189,6 +152,7 @@
             </div>
          </div>
       </section>
+      <!-- Section 3 -radiobtns -->
       <section class="sec3">
          <div class="container s3container">
             <div class="btnrow">
@@ -212,6 +176,7 @@
             </div>
          </div>
       </section>
+      <!-- Section 4 - quotes -->
       <section class="sec4">
 
          <div class="quotebox q1">
@@ -226,28 +191,8 @@
             <p>Jane Doe</p>
             <span>Ipsum dolor nullam</span>
          </div>
-
-         <!-- <div class="sec4text">
-            <div class="container">
-               <div class="sec4box">
-                  <i class="fas fa-quote-left"></i>
-                  <h2>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</h2>
-                  <p>Jane Doe</p>
-                  <span>Ipsum dolor nullam</span>
-               </div>
-               <div class="sec4box">
-                  <i class="fas fa-quote-left"></i>
-                  <h2>"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</h2>
-                  <p>Jane Doe</p>
-                  <span>Ipsum dolor nullam</span>
-                </div>
-            </div>
-         </div>
-         <div class="imgflex">
-            <img src="assets/images/pic03.jpg" alt="">
-            <img src="assets/images/pic04.jpg" alt="">
-         </div> -->
       </section>
+      <!-- Section 5 - progress -->
       <section class="sec5">
          <div class="container">
             <div class="flexcol leftinfo">
@@ -257,24 +202,35 @@
                <button class="btn">Learn More</button>
             </div>
             <div class="flexcol progress">
-               <label for="f1">Ipsum amet</label>
+               <div class="progress-item">
+                  <label for="f1">Ipsum amet</label>
                <progress id="f1" class="file" value="60" max="100"> </progress> 
                <span>60%</span>
-               <label for="f2">Ipsum amet</label>
+               </div>
+               <div class="progress-item">
+                  <label for="f2">Ipsum amet</label>
                <progress id="f2" class="file" value="90" max="100"> </progress> 
                <span>90%</span>
-               <label for="f3">Ipsum amet</label>
+               </div>
+               <div class="progress-item">
+                  <label for="f3">Ipsum amet</label>
                <progress id="f3" class="file" value="75" max="100"> </progress> 
                <span>75%</span>
-               <label for="f4">Ipsum amet</label>
+               </div>
+               <div class="progress-item">
+                  <label for="f4">Ipsum amet</label>
                <progress id="f4" class="file" value="45" max="100"> </progress> 
                <span>45%</span>
-               <label for="f5">Ipsum amet</label>
+               </div>
+               <div class="progress-item">
+                  <label for="f5">Ipsum amet</label>
                <progress id="f5" class="file" value="55" max="100"> </progress> 
                <span>55%</span>
+               </div>
             </div>
          </div>
       </section>
+      <!-- Contact Section -->
       <section class="contact">
          <div class="container">
             <div class="contact-info flexcol">
@@ -304,12 +260,14 @@
             </div>
             <div class="contact-form flexcol">
                <h2>Email Us</h2>
-               <div class="flexrow">
-                  <input type="text" class="name-input">
-                  <input type="email" class="email-input">
-               </div>
-               <textarea name="" class="" cols="30" rows="10"></textarea>
-               <button class="btn">Send Message</button>
+               <form action="#">
+                  <div class="flexrow">
+                     <input type="text" class="name-input" placeholder="Name" name="name-input">
+                     <input type="email" class="email-input" placeholder="Email" name="email-input">
+                  </div>
+                  <textarea name="" class="" cols="30" rows="10" placeholder='Message' name="message-input"></textarea>
+                  <button class="btn">Send Message</button>
+               </form>
             </div>
          </div>
          <div class="footerline"></div>

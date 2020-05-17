@@ -1,13 +1,56 @@
+
+// CSS reset
 @import "reset.scss";
 
+// Variables
 $baseRed: #ff887b;
 $white: rgba(255, 255, 255, 0.884);
 $black: rgba(0, 0, 0, 0.76);
 $grey: rgba(165, 165, 165, 0.89);
 
+// General styles
+
 body {
    font-family: 'Montserrat', sans-serif;
    line-height: 1.2;
+}
+
+
+
+#hamburger-icon {
+   display: inline-block;
+   cursor: pointer;
+   font-size: 2rem;
+   margin-right: 1rem;
+   position: fixed;
+   top: 1.2rem;
+   right: 4rem;
+   z-index: 99;
+   display: none;
+}
+
+
+
+.btn {
+   background-color: transparent;
+   text-transform: uppercase;
+   border: 1px solid $black;
+   border-radius: 5px;
+   padding: 1rem 4rem;
+   color: $black;
+   font-weight: 400;
+   font-size: 1rem;
+   cursor: pointer;
+   &:hover {
+      opacity: 0.8;
+   }
+}
+
+.flexrow {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+ 
 }
 
 .flexcol {
@@ -34,6 +77,8 @@ img {
    border-radius: 10px;
 }
 
+// Header section
+
 header {
    padding: 1rem 0;
    background: transparent;
@@ -47,7 +92,11 @@ header {
    flex-flow: row nowrap;
    justify-content: space-between;
    align-items: center;
+   a{
+      text-decoration: none;
+      color: $white;
 
+   }
    .logo {
       font-size: 1.8rem;
       font-weight: 400;
@@ -64,8 +113,14 @@ header {
          flex-flow: row nowrap;
          justify-content: space-evenly;
          a {
+            font-size: 1rem;
+            font-weight: 500;
             text-decoration: none;
             color: $white;
+            &:hover {
+               padding-bottom: 0.2rem;
+               border-bottom: 1px solid $white;
+            }
          }
          // .dropdown {
          //    &:hover{
@@ -85,6 +140,14 @@ header {
   
 }
 
+
+#hamburger-icon {
+   display: none;
+}
+
+
+// Hero Section
+
 #herobtn {
    color: $white;
    border-color: $white;
@@ -102,10 +165,10 @@ header {
    background-size: cover;
    padding-top: 5rem;
    border-top: 10px solid $baseRed;
-}
+   }
 
 .hero-box {
-   width: 50%;
+   max-width: 60%;
    display: flex;
    flex-flow: column nowrap;
    align-items: center;
@@ -140,6 +203,7 @@ header {
    }
 }
 
+// Section 1 - Primary
 .sec1 {
    padding: 5rem 0;
    // height: 100vh;
@@ -171,14 +235,16 @@ header {
       padding-left: 5rem;
    }
    .boxes {
+      padding: 2rem;
       display: flex;
       flex-flow: row wrap;
    }
    .box {
       width: 40%;
       display: flex;
-      border: 1px solid grey;
-      padding: 2rem;
+      flex-flow: row nowrap !important;
+      border: 1px solid rgba($grey, 0.6);
+      // padding: 2rem;
 
    }
    i {
@@ -213,6 +279,8 @@ header {
    border-left: none;
 }
 
+// Section 2
+
 .sec2 {
    text-align: center;
    padding: 8rem 0;
@@ -235,6 +303,8 @@ header {
       border: none;
    }
 }
+
+// Section 3
 
 .sec3 {
 
@@ -265,6 +335,10 @@ header {
       justify-content: space-evenly;
       line-height: 1.4;
 
+      button {
+         width: 40%;
+      }
+
       img {
          padding-left: 10%;
          width: 40%;
@@ -285,52 +359,29 @@ header {
 
 }
 
-.leftinfo {
-   text-align: left;
-   // height: 40vh;
-   justify-content: space-evenly;
-   padding: 5rem;
-   h2 {
-      font-size: 2.5rem;
-      padding-bottom: 2rem;
-      font-weight: 100;
-   }
-   img {
-      margin: 1rem 0;
-   }
+.selected {
+   border-bottom: none !important;
+   background-color: white;
 }
 
-.progress {
-   justify-content: space-evenly;
-   // height: 40vh;
-   label {
 
-   }
+.sm1 {
+   position: relative;
+
 }
 
+.smb1:hover ~ .sm1{
+
+   display: block !important;
+
+
+}
+
+
+// Section 4
 
 
 .sec4 {
-   // height: 70vh;
-   // .imgflex {
-   //    display: flex;
-   //    flex-flow: row nowrap;
-   // }
-   // img {
-   //    width: 50%;
-   //    border-radius: 0;
-
-   // }
-   // .sec4text {
-   //    position: absolute;
-   //    margin: 0 auto;   
-   //    text-align: center;
-   //    align-items: center;
-   // }
-   // .sec4box {
-   //    width: 50%;
-   //    text-align: center;
-   // }
 
    display: flex;
    flex-flow: row nowrap;
@@ -382,9 +433,32 @@ header {
 
 }
 
-#hamburger-icon {
-   display: none;
+
+// Section 5
+
+.leftinfo {
+   text-align: left;
+   // height: 40vh;
+   justify-content: space-evenly;
+   padding: 5rem;
+   h2 {
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+      font-weight: 100;
+   }
+   img {
+      margin: 1rem 0;
+   }
 }
+
+.progress {
+   justify-content: space-evenly;
+   // height: 40vh;
+   label {
+
+   }
+}
+
 .progress{
    margin-left: 2rem;
    span {
@@ -420,12 +494,7 @@ header {
    background-color: $grey;   
 }
 
-.mobilenav {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   
-}
+
 
 .info {
    padding-bottom: 5rem;
@@ -443,6 +512,9 @@ header {
       padding: 1rem;
    }
 }
+
+
+// Contact Section
 
 .contact-nav {
    display: flex;
@@ -462,8 +534,6 @@ header {
       background-color: rgba($white, 0.5);
    }
 }
-
-
 
 .contact {
 
@@ -489,6 +559,11 @@ header {
       display: flex;
       padding: 1rem 0;
       width: 50%;
+      &:hover{
+         border-bottom: 1px solid;
+         cursor: pointer;
+         transform: scale(1.1);
+      }
       // justify-content: start;
       i {
          margin-right: 1rem;
@@ -504,39 +579,38 @@ header {
    .contact-form {
       justify-content: space-between;
       input, textarea {
+         color: white;
          background-color: transparent;
          border: 1px solid rgba($white, 0.7);
          border-radius: 5px;
+         &::placeholder {
+            padding: 1rem;
+            color: $white;
+         }
+         &:focus {
+            border-color: white;
+            border-width: 2px;
+            color: white;
+            &::placeholder {
+               color: transparent;
+            }
+         }
       }
       input {
+         width: 45%;
          font-size: 1.5rem;
          padding: 0.5rem;
       }
       textarea {
+         font-size: 1.5rem;
+         padding: 0.5rem;
          margin: 2rem 0;
+         width: 98%;
       }
    }
 }
-.btn {
-   background-color: transparent;
-   text-transform: uppercase;
-   border: 1px solid $black;
-   border-radius: 5px;
-   padding: 1rem 4rem;
-   color: $black;
-   font-weight: 400;
-   font-size: 1rem;
-   cursor: pointer;
-   &:hover {
-      opacity: 0.8;
-   }
-}
 
-.flexrow {
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: space-between;
-}
+// Footer
 
 .footerline {
    border-bottom: 1px solid rgba($white, 0.7);
@@ -549,96 +623,51 @@ small {
    text-align: center;
 }
 
-.selected {
-   border-bottom: none !important;
-   background-color: white;
-}
+// End
 
-#bars{
-   // visibility: hidden;
-   // display: none;
-   // &:checked nav {
-   //    display: block !important;
-   // }
-}
+// Responsive Media Queries
 
-.submenu {
-   // display: none !important;
-}
-
-.sm1 {
-   position: relative;
-
-}
-
-.smb1:hover ~ .sm1{
-
-   display: block !important;
+@media screen and (max-width: 769px) {
 
 
-}
+   .desktopnav {
+      display: flex !important;
+      flex-flow: column nowrap !important;
+      position: fixed !important;
+      top: 0 !important;
+      bottom: 0;
+      left: 0;
+      right: 0;
+   
+   }
+   
+   header{
+      height: 4vh !important;
+   }
+   
+   .sec1{
 
-.fa-bars {
-   display: inline-block;
-   cursor: pointer;
-   font-size: 2rem;
-   margin-right: 1rem;
-   position: fixed;
-   top: 1.2rem;
-   right: 4rem;
-   z-index: 99;
-   display: none;
-}
+      .box {
+         flex-flow: row wrap;
+         justify-content: center;
+         align-items: center;
+      }
+   }
 
-// .mobilenav{
-//    display: none;
-// }
-
-@media screen and (max-width: 768px) {
    html {
       font-size: 10px;
    }
 
-   .desktopnav {
-      display: none !important;
-   }
-   #bars{
-  
-      // visibility: hidden;
-      // display: none;
-      &:checked ~ .mobilenav {
 
-         a {
-            text-decoration: none;
-            color: $white;
-            margin-bottom: 2rem;
-         }
-
-         background-color: rgba($baseRed, 0.8);
-         font-size: 3rem;
-         line-height: 2;
-         // display: block !important;
-         position: fixed !important;
-         top: 0 !important;
-         right: 0 !important;
-         left: 0 !important;
-         bottom: 0 !important;
-         display: flex;
-         flex-flow: column nowrap;
-         // flex-direction: column;
-         justify-content: space-evenly;
-         align-items: center;
-      }
-   }
-   // #bars:checked ~ nav {
-   //    display: block !important;
-   // }
-   
+ 
    .fa-bars {
-      display: block;
+      display: inline-block !important;
+      padding-top: 1rem;
    }
 
 .hero-box {
+   width: 100% !important;
+   font-size: 1rem !important;
    .btn {
    
          font-size: 1.4rem;
@@ -663,19 +692,18 @@ small {
       order: 1;
    }
    .one-text {
-      // height: 80vh;
+
       width: 100% !important;
       display: flex;
       flex-flow: column nowrap;
-      // justify-content: space-evenly;
-      // padding-left: 5rem;
+ 
    }
    .box {
-      width: 100% !important;
+      // width: 100% !important;
       display: flex;
       border: 1px solid grey;
       padding: 2rem;
-      border: none !important;
+      // border: none !important;
    }
    .container {
       max-width: 1440px;

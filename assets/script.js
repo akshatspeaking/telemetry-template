@@ -1,11 +1,4 @@
-// function scrollFunction() {
-//    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//      document.getElementById("header").style.backgroundColor = "#ff887b";
-//    } else {
-//      document.getElementById("header").style.backgroundColor = "transparent";
-//    }
-//  } 
-
+// Header parallax scrolling 
 const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
 const scroll = window.scrollY;
@@ -14,7 +7,7 @@ document.addEventListener("scroll", (e) => {
    let offset = window.scrollY;
    hero.style.backgroundPositionY = -offset * 0.5 + "px";
 
-   if (scrollY >= 448) {
+   if (scrollY >= 898) {
       header.style.backgroundColor = "#ff887bdc";
    }
    else {
@@ -23,18 +16,19 @@ document.addEventListener("scroll", (e) => {
    // console.log(scrollY);
 })
 
+
+
+// Radio Button section - change text on different button clicks
 document.querySelectorAll(".radiobtn").forEach(x => {
    
-   
-   // document.querySelectorAll(".radiobtn").forEach(x => {x.style.border = "1px solid black"})
+
    
    x.addEventListener("click", (e) => {
 
       document.querySelectorAll(".radiobtn").forEach(x => {
          x.classList.remove("selected");
          x.style.transform = "scale(1)";
-         // |transform-functions|initial|inherit 
-   
+ 
       })
 
       e.target.style.transform = "scale(1.2)"
