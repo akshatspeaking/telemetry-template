@@ -128,8 +128,8 @@ img {
   display: flex;
   flex-flow: column nowrap;
   position: absolute;
-  top: 4rem;
-  left: 7rem;
+  top: 2rem;
+  left: 6rem;
   z-index: 9;
   justify-content: space-evenly;
   height: auto;
@@ -338,8 +338,7 @@ header .desktopnav ul .homepagelink {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    margin: 1rem !important;
-    padding: 0;
+    padding-left: 2rem !important;
     border: none;
     border-bottom: 1px solid rgba(165, 165, 165, 0.6);
   }
@@ -359,11 +358,15 @@ header .desktopnav ul .homepagelink {
   .hero-box {
     width: 100% !important;
     font-size: 1rem !important;
+    padding: 0 !important;
   }
   .hero-box .btn {
     font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.884) !important;
     border-color: rgba(255, 255, 255, 0.884) !important;
+  }
+  .hero-box h1 {
+    font-size: 1.8rem !important;
   }
 
   .hero {
@@ -409,7 +412,7 @@ header .desktopnav ul .homepagelink {
     margin: 2rem 0;
   }
   .sec2 .row {
-    width: 90%;
+    width: 90% !important;
     border: none !important;
     padding: 1rem 0 2rem 0;
     margin-bottom: 1rem;
@@ -511,6 +514,30 @@ header .desktopnav ul .homepagelink {
 
   .mob.dropdown:hover > .mob.sm1 {
     display: flex;
+  }
+}
+@media screen and (max-width: 400px) {
+  .box {
+    width: 90% !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(165, 165, 165, 0.89) !important;
+  }
+  .box:last-child {
+    border: 0 !important;
+  }
+
+  .sec2 .s2container {
+    flex-flow: column nowrap !important;
+  }
+
+  .sec2 .row {
+    width: 90% !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.884) !important;
+  }
+
+  .sec4 {
+    flex-flow: column nowrap !important;
   }
 }
 #herobtn {
@@ -658,7 +685,7 @@ header .desktopnav ul .homepagelink {
   margin: 0 auto;
   align-items: center;
   display: flex;
-  flex-flow: row wrap !important;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
 .sec2 h2 {

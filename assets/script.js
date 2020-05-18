@@ -31,6 +31,7 @@ function showHeader(e) {
          document.getElementById("hamburger-icon").replaceChild(ham, cross);
 
          document.querySelector(".mobilenav").style.display = "none";
+         
          console.log("c")
 
          c = 0;   
@@ -75,7 +76,10 @@ document.querySelectorAll(".radiobtn").forEach(x => {
 
       e.target.style.color = "tomato"
       e.target.classList.add("selected");
+      e.target.style.transform = "scaleY(1.2)";
+      e.target.style.borderTop = "1.5px solid grey";
          if (e.target.classList.contains("rb1")){
+            
             document.querySelector(".editheading").innerText = "Lorem ipsum dolor sit magna feugiat etiam sed dolor"
             document.querySelector(".edittext").innerText = "Maecenas id feugiat nunc. Integer gravida augue libero, quis pellentesque amet pharetra a. Ut sagittis ipsum nec velit porttitor, sed convallis ligula pellentesque. Mauris et dignissim sem lacinia lorem ipsum dolor."      
          } else if (e.target.classList.contains("rb2")){

@@ -117,8 +117,8 @@
          flex-flow: row nowrap;
          justify-content: center;
          align-items: center;
-         margin: 1rem !important;
-         padding: 0;  
+         // margin: 1rem !important;
+         padding-left: 2rem !important;  
          border: none;
          border-bottom: 1px solid rgba($grey, 0.6);
       }
@@ -141,6 +141,7 @@
    .hero-box {
    width: 100% !important;
    font-size: 1rem !important;
+   padding: 0 !important;
    .btn {
    
          font-size: 1.4rem;
@@ -148,7 +149,14 @@
          border-color: $white !important;
       
    }
+
+   h1 {
+      font-size: 1.8rem !important;  
    }
+   }
+   
+
+
 
    .hero {
       padding-top: 8rem !important;
@@ -193,7 +201,7 @@
          margin: 2rem 0;
       }
       .row {
-         width: 90%;
+         width: 90% !important;
          border: none !important;
          padding: 1rem 0 2rem 0 ;
          margin-bottom: 1rem ;
@@ -319,3 +327,27 @@
 
 }
 
+@media screen and (max-width: 400px) {
+   .box {
+      width: 90% !important;
+      border: 0 !important;
+      border-bottom: 1px solid $grey !important;
+      &:last-child {
+         border: 0 !important;
+      }
+   }
+
+  .sec2 .s2container {
+      flex-flow: column nowrap !important;
+   }
+
+  .sec2 .row {
+      width: 90% !important;
+      border: 0 !important;
+      border-bottom: 1px solid $white !important;
+   }
+
+   .sec4 {
+      flex-flow: column nowrap !important;
+   }
+}
