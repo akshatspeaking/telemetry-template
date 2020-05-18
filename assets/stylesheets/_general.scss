@@ -1,0 +1,59 @@
+
+// Variables
+$baseRed: #ff887b;
+$white: rgba(255, 255, 255, 0.884);
+$black: rgba(0, 0, 0, 0.76);
+$grey: rgba(165, 165, 165, 0.89);
+
+// General styles
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   line-height: 1.2;
+}
+
+
+.btn {
+   background-color: transparent;
+   text-transform: uppercase;
+   border: 1px solid $black;
+   border-radius: 5px;
+   padding: 1rem 4rem;
+   color: $black;
+   font-weight: 400;
+   font-size: 1rem;
+   cursor: pointer;
+   &:hover {
+      opacity: 0.8;
+   }
+}
+
+.flexrow {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+ 
+}
+
+.flexcol {
+   display: flex;
+   flex-flow: column nowrap;
+   width: 42%;
+   justify-content: space-evenly;
+   // justify-content: space-between;
+   // align-items: center;
+}
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   align-items: center;
+   display: flex;
+   flex-flow: row wrap !important;
+   justify-content: space-evenly;
+}
+
+
+img {
+   width: 100%;
+   border-radius: 10px;
+}

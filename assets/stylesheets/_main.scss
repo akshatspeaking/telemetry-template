@@ -1,0 +1,386 @@
+
+// Section 1 - Primary
+.sec1 {
+
+   .s1container {
+      display: flex !important;
+      flex-flow: row wrap !important;
+      max-width: 1440px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-evenly;
+   }
+
+   padding: 5rem 0;
+   // height: 100vh;
+   background-color: $white;
+   display: flex;
+   flex-flow: row nowrap;
+   h2 {
+      color: $black;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 0 5rem;
+      // justify-self: flex-start;
+      // align-items: center;
+      text-align: center;
+   }
+   h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $baseRed;
+      padding-bottom: 1rem;
+      // align-self: flex-start;
+   }
+   .one-img {
+      width: 30%;
+   }
+   .one-text {
+      // height: 80vh;
+      width: 70%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      // padding-left: 5rem;
+   }
+   .boxes {
+      // padding: 2rem;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 3rem 0;
+      font-size: 1.4rem;
+      // justify-content: space-evenly;
+   }
+   .box {
+      width: 40%;
+      display: flex;
+      flex-flow: row nowrap;
+      border: 1px solid rgba($grey, 0.6);
+      padding: 1rem !important;
+
+   }
+   i {
+      // padding-top: 0.5rem;
+      color: $baseRed;
+      font-size: 2rem;
+   }
+   .boxtext {
+      padding-left: 2rem;
+   }
+   .b1 {
+      border-top: none;
+      border-left: none;
+   }
+   .b2 {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+   }
+   .b3 {
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+   }
+   .b4 {
+      border: none;
+   }
+}
+
+.b1 {
+   border-top: none;
+   border-left: none;
+}
+
+// Section 2
+
+.sec2 {
+
+   .s2container {
+      max-width: 1440px;
+      margin: 0 auto;
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap !important;
+      justify-content: space-evenly;
+   }
+
+   text-align: center;
+   padding: 8rem 0;
+   color: $white;
+   background-color: $baseRed;
+   h2 {
+      font-size: 3rem;
+   }
+   h3{
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 2rem 0;
+   }
+   .row {
+      width: 20%;
+      border-right: 1px solid $white;
+      padding-right: 2rem;
+   }
+   .row:last-child {
+      border: none !important;
+   }
+}
+
+// Section 3
+
+.sec3 {
+
+   padding: 5rem 0;
+
+   // height: 50vh;
+   background-color: $white;
+
+   .btnrow {
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid $grey;
+
+      .rb1 {
+         border-right: 1px solid $grey;
+      }
+
+      .rb3 {
+         border-left: 1px solid $grey;
+         border-right: 1px solid $grey;
+      }
+      
+      button {
+         // border-right: 1px solid $grey;
+         border-bottom: 1px solid $grey;
+         border-top: 1px solid $grey !important; 
+         border: 0;
+         border-radius: 0;
+         padding: 1rem 3rem;
+         border-bottom: none;
+      }
+
+   }
+   .s3container {
+      border: 1px solid rgba($grey, 0.6);
+      border-top: 0;
+      // padding: 1rem ;
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+      // align-items: center;
+   }
+
+   .s3content {
+      display: flex;
+      justify-content: space-evenly;
+      line-height: 1.4;
+
+      button {
+         width: 40%;
+         padding: 1rem;
+      }
+      .img {
+         width: 50%;
+         // padding-top: 2rem;
+      }
+      img {
+         // padding-left: 10%;
+         width: 100%;
+         border-radius: 10px;
+         height: auto;
+      }
+      .flexcol {
+         display: flex;
+         flex-flow: column nowrap;
+         width: 50%;
+         padding: 1rem 3rem;
+         h2 {
+            margin-top: 1rem;
+            font-size: 2.5rem;
+            padding-bottom: 1rem;
+            font-weight: 100;
+         }
+      }
+   }
+
+}
+
+.selected {
+   border-bottom: none !important;
+   background-color: white;
+}
+
+
+.sm1 {
+   position: relative;
+
+}
+
+.smb1:hover ~ .sm1{
+
+   // display: block !important;
+
+
+}
+
+
+// Section 4
+
+
+.sec4 {
+
+   display: flex;
+   flex-flow: row nowrap;
+   .quotebox {
+      padding: 10rem 7rem;
+      width: 50%;
+      // height: 50rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h2{
+         padding: 2rem 0;
+      }
+   }
+
+   .q1 {
+      background: url("../images/pic03.jpg");
+      background-repeat: no-repeat;
+   
+   }
+   .q2 {
+      background: url("../images/pic04.jpg");
+      background-repeat: no-repeat; 
+   }
+
+   h2{
+      color: $white;
+      font-size: 2rem;
+      font-weight: 300;
+   }
+   p {
+      color: $baseRed;
+      font-size: 1rem;
+   }
+   span {
+      color: $white;
+      font-size: 1rem;
+   }
+   i {
+      border-radius: 50%;
+      height: 6rem;
+      width: 6rem;
+      font-size: 3rem;
+      display: grid;
+      place-items: center;
+      background-color: $baseRed;
+      color: $white;
+
+   }
+
+}
+
+
+// Section 5
+
+.leftinfo {
+   text-align: left;
+   // height: 40vh;
+   justify-content: space-evenly;
+   padding: 1rem;
+   h2 {
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+      font-weight: 100;
+   }
+   img {
+      margin: 1rem 0;
+   }
+}
+
+.progress-item {
+   padding: 1rem 0;
+   label {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-bottom: 1rem;
+   }
+   span {
+      color: $baseRed;
+      padding-bottom: 1rem;
+   }
+}
+
+.progress {
+   justify-content: space-evenly;
+   // height: 40vh;
+   label {
+
+   }
+}
+
+.progress{
+   // margin-left: 2rem;
+   padding: 1rem 0;
+   span {
+      margin-bottom: 2rem;
+   }
+}
+
+
+.file {
+
+   margin: 1rem 0 1rem 0;
+
+   /* Reset the default appearance */
+   -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
+   
+   /* Get rid of default border in Firefox. */
+   border: none;
+   
+   /* Dimensions */
+   width: 100%;
+   height: 2px;
+
+ }
+ progress {background-color: $grey;}
+ progress::-webkit-progress-bar {background-color: $grey; width: 100%;}
+
+ progress::-moz-progress-bar {background-color: $baseRed  !important;}
+ progress::-webkit-progress-value {background-color: $baseRed !important;}
+
+ .file[max] {
+   //  background-color: $grey !important;   
+ }
+
+ .file[value] {
+   // background-color: $baseRed !important;   
+}
+
+
+
+.info {
+   padding-bottom: 5rem;
+}
+
+.sec5 {
+   // height: 100vh;
+   background-color: $white;
+   color: $black;
+   button {
+      margin-top: 2rem;
+      border-color: $black;
+      color: $black;
+      // width: 30%;
+      padding: 1rem;
+   }
+}
+

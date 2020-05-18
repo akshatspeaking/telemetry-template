@@ -1,0 +1,119 @@
+
+// Contact Section
+
+.contact-info {
+   // height: 100%;
+   align-self: flex-start;
+}
+
+
+.contact-nav {
+   display: flex;
+}
+
+.contact-nav>* {
+   cursor: pointer;
+   border: 1px solid $white;
+   height: 3rem;
+   width: 3rem;
+   border-radius: 10px;
+   margin-right: 1rem;
+   display: grid !important;
+   place-items: center !important;
+
+   &:hover {
+      background-color: rgba($white, 0.5);
+   }
+}
+
+.contact {
+
+
+   button {
+      border: 1px solid rgba($white, 0.7);
+      color: $white;
+      // width: 40%;
+      padding: 1rem;
+   }
+   padding: 5rem;
+   background-color: $baseRed;
+   color: $white;
+   // height: 100vh;
+
+
+   h2 {
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+   }
+
+   address {
+      text-align: left;
+   }
+   .infobox {
+      font-size: 1.5rem;
+      display: flex;
+      padding: 1rem 0;
+      width: 50%;
+      &:hover{
+         border-bottom: 1px solid;
+         cursor: pointer !important;
+         transform: scale(1.1) !important;
+      }
+      // justify-content: start;
+      i {
+         margin-right: 1rem;
+         padding-top: 0.25rem;
+      }
+   }
+
+   input {
+      display: inline-block;
+      width: 45%;
+   }
+
+   .contact-form {
+      justify-content: space-between;
+      input, textarea {
+         color: white;
+         background-color: transparent;
+         border: 1px solid rgba($white, 0.7);
+         border-radius: 5px;
+         &::placeholder {
+            padding: 1rem;
+            color: $white;
+         }
+         &:focus {
+            border-color: white;
+            border-width: 2px;
+            color: white;
+            &::placeholder {
+               color: transparent;
+            }
+         }
+      }
+      input {
+         width: 45%;
+         font-size: 1.5rem;
+         padding: 0.5rem;
+      }
+      textarea {
+         font-size: 1.5rem;
+         padding: 0.5rem;
+         margin: 2rem 0;
+         width: 98%;
+      }
+   }
+}
+
+// Footer
+
+.footerline {
+   border-bottom: 1px solid rgba($white, 0.7);
+   // width: 50vw;
+   margin: 2rem 0;
+}
+
+small {
+   display: block;
+   text-align: center;
+}

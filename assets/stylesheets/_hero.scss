@@ -1,0 +1,58 @@
+
+
+// Hero Section
+
+#herobtn {
+   color: $white;
+   border-color: $white;
+}
+.hero {
+   background-image: url(../images/pic01.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: grid;
+   place-items: center;
+   padding-bottom: 20rem;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 5rem;
+   border-top: 10px solid $baseRed;
+   }
+
+.hero-box {
+   max-width: 60%;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   justify-content: space-around;
+   i {
+      display: grid;
+      place-items: center;
+      height: 7rem;
+      width: 7rem;
+      color: $baseRed;
+      background-color: $white;
+      font-size: 3rem;
+      border-radius: 50%;
+   }
+
+
+   h1 {
+      color: $white;
+      font-size: 4rem;
+      text-align: center;
+      margin-top: 3rem;
+      font-weight: 400;
+   }
+   hr {
+
+      border: 1px solid $white;
+      width: 100%;
+      margin-top: 3rem;
+   }
+   button {
+      margin-top: 5rem;
+   }
+}
