@@ -21,14 +21,61 @@
          <span class="byline"> By Pixelarity</span>
       </a>
       </div>
-      <label for="bars">
-         <i class="fas fa-bars" id="hamburger-icon"></i>
+      <label for="bars" id="hamburger-icon">
+         <i class="fas fa-bars"></i>
       </label>
       <input type="checkbox" id="bars">
+      <nav class=>
+         <ul class="mobilenav">
+            <li class="homepagelink">
+               <a href="#">Home</a>
+            </li>
+            <li class="smb1 mob">
+               <a href="#" class="mob dropdown">
+               <i class="fas fa-chevron-down"></i>
+               Dropdown
+               </a>
+                  <ul class="submenu sm1 mob">
+                     <li>
+                        <a href="#">Option 1</a>
+                     </li>
+                     <li>
+                        <a href="#">Option 2</a>
+                     </li>
+                     <li>
+                        <a href="#">Option 3</a>
+                     </li>
+                     <li class="smb2 mob">
+                        <a href="#">Submenu</a>
+                        <ul  class="submenu sm2 mob">
+                           <li>
+                              <a href="#">Option 1</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 2</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 3</a>
+                           </li>
+                           <li>
+                              <a href="#">Option 4</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+            </li>
+            <li>
+               <a href="#">Generic</a>
+            </li>
+            <li>
+               <a href="#">Elements</a>
+            </li>
+         </ul>
+      </nav>
       <nav class="desktopnav">
          <ul>
             <li>
-               <a href="#">Home</a>
+               <a href="#" class="homepagelink">Home</a>
             </li>
             <li class="smb1">
                <a href="#" class="dropdown">
@@ -88,7 +135,7 @@
       </section>
       <!-- Primary Section -->
       <section class="sec1">
-         <div class="container">
+         <div class="s1container">
             <div class="one-img">
                <img src="assets/images/pic02.jpg" alt="">
             </div>
@@ -129,7 +176,7 @@
       </section>
       <!-- Section 2 -->
       <section class="sec2">
-         <div class="container">
+         <div class="s2container">
             <div class="row">
                <h2>128</h2>
                <h3>Lorem ipsum</h3>
@@ -154,7 +201,7 @@
       </section>
       <!-- Section 3 -radiobtns -->
       <section class="sec3">
-         <div class="container s3container">
+         <div class="s3container">
             <div class="btnrow">
                <button class="radiobtn rb1">
                   Aliquam
@@ -172,7 +219,9 @@
                   <p class="edittext">Maecenas id feugiat nunc. Integer gravida augue libero, quis pellentesque amet pharetra a. Ut sagittis ipsum nec velit porttitor, sed convallis ligula pellentesque. Mauris et dignissim sem lacinia lorem ipsum dolor.</p>
                   <button class="btn">Learn More</button>
                </div>
-               <img src="assets/images/pic03.jpg" alt="">
+               <div class="img">
+                  <img src="assets/images/pic03.jpg" alt="">
+               </div>
             </div>
          </div>
       </section>
@@ -232,7 +281,7 @@
       </section>
       <!-- Contact Section -->
       <section class="contact">
-         <div class="container">
+         <div class="ccontactcontainer container">
             <div class="contact-info flexcol">
                <h2>Contact</h2>
                <div class="info">

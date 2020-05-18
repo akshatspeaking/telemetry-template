@@ -1,3 +1,45 @@
+let clicker = document.querySelector(".rb1");
+
+
+// Hamburger icon click
+let c = 0;
+function showHeader(e) {
+   
+   if (c == 0) {
+      
+      let ham = document.querySelector(".fa-bars")
+      let cross = document.createElement("i");
+      cross.classList.add("fas");
+      cross.classList.add("fa-times");
+      document.getElementById("hamburger-icon").replaceChild(cross, ham);
+      
+      document.querySelector(".mobilenav").style.display = "flex";
+
+      console.log("ss")
+
+      c = 1;}
+      else if (c == 1) {
+         let ham = document.createElement("i");
+         ham.classList.add("fas");
+         ham.classList.add("fa-bars");
+         
+      // let cross = document.createElement("i");
+      // cross.classList.add("fas");
+      // cross.classList.add("fa-times");
+      let cross = document.querySelector(".fa-times")
+
+         document.getElementById("hamburger-icon").replaceChild(ham, cross);
+
+         document.querySelector(".mobilenav").style.display = "none";
+         console.log("c")
+
+         c = 0;   
+      }
+}
+
+
+document.getElementById("hamburger-icon").addEventListener("click", showHeader);
+
 // Header parallax scrolling 
 const hero = document.querySelector(".hero");
 const header = document.querySelector("header");
@@ -28,10 +70,10 @@ document.querySelectorAll(".radiobtn").forEach(x => {
       document.querySelectorAll(".radiobtn").forEach(x => {
          x.classList.remove("selected");
          x.style.transform = "scale(1)";
- 
+         x.style.color = "black";
       })
 
-      e.target.style.transform = "scale(1.2)"
+      e.target.style.color = "tomato"
       e.target.classList.add("selected");
          if (e.target.classList.contains("rb1")){
             document.querySelector(".editheading").innerText = "Lorem ipsum dolor sit magna feugiat etiam sed dolor"
@@ -48,6 +90,7 @@ document.querySelectorAll(".radiobtn").forEach(x => {
    })
 })
 
+clicker.click();
 
 // on click on any radiobtns,
 // remove selected from all radiobtns

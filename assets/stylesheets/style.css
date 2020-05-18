@@ -61,10 +61,9 @@ body {
   display: inline-block;
   cursor: pointer;
   font-size: 2rem;
-  margin-right: 1rem;
   position: fixed;
   top: 1.2rem;
-  right: 4rem;
+  right: 2rem;
   z-index: 99;
   display: none;
 }
@@ -93,8 +92,8 @@ body {
 .flexcol {
   display: flex;
   flex-flow: column nowrap;
-  width: 50%;
-  justify-content: space-between;
+  width: 42%;
+  justify-content: space-evenly;
 }
 
 .container {
@@ -102,6 +101,7 @@ body {
   margin: 0 auto;
   align-items: center;
   display: flex;
+  flex-flow: row wrap !important;
   justify-content: space-evenly;
 }
 
@@ -112,6 +112,56 @@ body {
 img {
   width: 100%;
   border-radius: 10px;
+}
+
+.sm1, .sm2 {
+  position: relative;
+}
+
+.sm1.submenu, .sm2.submenu {
+  display: none;
+}
+
+.dropdown {
+  z-index: 100;
+}
+
+.smb1:hover > .sm1.submenu {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 3.8rem;
+  z-index: 9;
+  justify-content: space-evenly;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.884);
+  width: auto;
+  border-radius: 10px;
+}
+
+.smb2:hover > .sm2 {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 3.8rem;
+  left: 6.8rem;
+  z-index: 9;
+  justify-content: space-evenly;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.884);
+  width: auto;
+  border-radius: 10px;
+}
+
+.submenu {
+  z-index: 999;
+  background-color: rgba(165, 165, 165, 0.6);
+}
+.submenu li {
+  padding: 1rem;
+}
+.submenu li a {
+  color: rgba(0, 0, 0, 0.76) !important;
 }
 
 header {
@@ -140,6 +190,9 @@ header .logo {
 header .byline {
   font-size: 1.2rem;
 }
+header .mobilenav {
+  display: none;
+}
 header .desktopnav ul {
   width: 30vw;
   display: flex;
@@ -156,9 +209,11 @@ header .desktopnav ul a:hover {
   padding-bottom: 0.2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.884);
 }
-
-.submenu {
-  display: none !important;
+header .desktopnav ul .homepagelink {
+  padding-bottom: 0.2rem !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.884) !important;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: 700;
 }
 
 #hamburger-icon {
@@ -207,7 +262,7 @@ header .desktopnav ul a:hover {
   font-size: 4rem;
   text-align: center;
   margin-top: 3rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .hero-box hr {
   border: 1px solid rgba(255, 255, 255, 0.884);
@@ -224,14 +279,23 @@ header .desktopnav ul a:hover {
   display: flex;
   flex-flow: row nowrap;
 }
+.sec1 .s1container {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .sec1 h2 {
   color: rgba(0, 0, 0, 0.76);
   font-size: 2rem;
-  font-weight: 300;
-  justify-self: flex-start;
+  font-weight: 600;
+  padding: 0 5rem;
+  text-align: center;
 }
 .sec1 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #ff887b;
   padding-bottom: 1rem;
@@ -244,23 +308,25 @@ header .desktopnav ul a:hover {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
-  padding-left: 5rem;
 }
 .sec1 .boxes {
-  padding: 2rem;
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  font-size: 1.4rem;
 }
 .sec1 .box {
   width: 40%;
   display: flex;
-  flex-flow: row nowrap !important;
+  flex-flow: row nowrap;
   border: 1px solid rgba(165, 165, 165, 0.6);
+  padding: 1rem !important;
 }
 .sec1 i {
-  padding-top: 0.5rem;
   color: #ff887b;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .sec1 .boxtext {
   padding-left: 2rem;
@@ -294,6 +360,14 @@ header .desktopnav ul a:hover {
   color: rgba(255, 255, 255, 0.884);
   background-color: #ff887b;
 }
+.sec2 .s2container {
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap !important;
+  justify-content: space-evenly;
+}
 .sec2 h2 {
   font-size: 3rem;
 }
@@ -308,7 +382,7 @@ header .desktopnav ul a:hover {
   padding-right: 2rem;
 }
 .sec2 .row:last-child {
-  border: none;
+  border: none !important;
 }
 
 .sec3 {
@@ -316,18 +390,32 @@ header .desktopnav ul a:hover {
   background-color: rgba(255, 255, 255, 0.884);
 }
 .sec3 .btnrow {
+  width: 100%;
   display: flex;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.89);
+}
+.sec3 .btnrow .rb1 {
+  border-right: 1px solid rgba(165, 165, 165, 0.89);
+}
+.sec3 .btnrow .rb3 {
+  border-left: 1px solid rgba(165, 165, 165, 0.89);
+  border-right: 1px solid rgba(165, 165, 165, 0.89);
 }
 .sec3 .btnrow button {
-  border-right: 1px solid rgba(165, 165, 165, 0.89);
+  border-bottom: 1px solid rgba(165, 165, 165, 0.89);
+  border-top: 1px solid rgba(165, 165, 165, 0.89) !important;
+  border: 0;
   border-radius: 0;
   padding: 1rem 3rem;
   border-bottom: none;
 }
 .sec3 .s3container {
+  border: 1px solid rgba(165, 165, 165, 0.6);
+  border-top: 0;
+  width: 95%;
+  margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
 }
 .sec3 .s3content {
   display: flex;
@@ -336,21 +424,26 @@ header .desktopnav ul a:hover {
 }
 .sec3 .s3content button {
   width: 40%;
+  padding: 1rem;
+}
+.sec3 .s3content .img {
+  width: 50%;
 }
 .sec3 .s3content img {
-  padding-left: 10%;
-  width: 40%;
+  width: 100%;
   border-radius: 10px;
+  height: auto;
 }
 .sec3 .s3content .flexcol {
   display: flex;
   flex-flow: column nowrap;
   width: 50%;
+  padding: 1rem 3rem;
 }
 .sec3 .s3content .flexcol h2 {
   margin-top: 1rem;
   font-size: 2.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   font-weight: 100;
 }
 
@@ -363,22 +456,21 @@ header .desktopnav ul a:hover {
   position: relative;
 }
 
-.smb1:hover ~ .sm1 {
-  display: block !important;
-}
-
 .sec4 {
   display: flex;
   flex-flow: row nowrap;
 }
 .sec4 .quotebox {
-  padding: 10rem 0;
+  padding: 10rem 7rem;
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.sec4 .quotebox h2 {
+  padding: 2rem 0;
 }
 .sec4 .q1 {
   background: url("../images/pic03.jpg");
@@ -415,7 +507,7 @@ header .desktopnav ul a:hover {
 .leftinfo {
   text-align: left;
   justify-content: space-evenly;
-  padding: 5rem;
+  padding: 1rem;
 }
 .leftinfo h2 {
   font-size: 2.5rem;
@@ -426,11 +518,24 @@ header .desktopnav ul a:hover {
   margin: 1rem 0;
 }
 
+.progress-item {
+  padding: 1rem 0;
+}
+.progress-item label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.progress-item span {
+  color: #ff887b;
+  padding-bottom: 1rem;
+}
+
 .progress {
   justify-content: space-evenly;
 }
 .progress {
-  margin-left: 2rem;
+  padding: 1rem 0;
 }
 .progress span {
   margin-bottom: 2rem;
@@ -449,12 +554,21 @@ header .desktopnav ul a:hover {
   height: 2px;
 }
 
-.file[max] {
-  background-color: #ff887b;
+progress {
+  background-color: rgba(165, 165, 165, 0.89);
 }
 
-.file[value] {
+progress::-webkit-progress-bar {
   background-color: rgba(165, 165, 165, 0.89);
+  width: 100%;
+}
+
+progress::-moz-progress-bar {
+  background-color: #ff887b !important;
+}
+
+progress::-webkit-progress-value {
+  background-color: #ff887b !important;
 }
 
 .info {
@@ -469,8 +583,11 @@ header .desktopnav ul a:hover {
   margin-top: 2rem;
   border-color: rgba(0, 0, 0, 0.76);
   color: rgba(0, 0, 0, 0.76);
-  width: 30%;
   padding: 1rem;
+}
+
+.contact-info {
+  align-self: flex-start;
 }
 
 .contact-nav {
@@ -499,22 +616,25 @@ header .desktopnav ul a:hover {
 .contact button {
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.884);
-  width: 30%;
   padding: 1rem;
 }
 .contact h2 {
   font-size: 2.5rem;
   padding-bottom: 2rem;
 }
+.contact address {
+  text-align: left;
+}
 .contact .infobox {
+  font-size: 1.5rem;
   display: flex;
   padding: 1rem 0;
   width: 50%;
 }
 .contact .infobox:hover {
   border-bottom: 1px solid;
-  cursor: pointer;
-  transform: scale(1.1);
+  cursor: pointer !important;
+  transform: scale(1.1) !important;
 }
 .contact .infobox i {
   margin-right: 1rem;
@@ -568,24 +688,115 @@ small {
 }
 
 @media screen and (max-width: 769px) {
+  .boxes {
+    flex-flow: row wrap !important;
+    padding: 1rem !important;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  .edittext {
+    margin-bottom: 1rem;
+    margin: 0 auto !important;
+    text-align: left;
+    padding: 1rem 0;
+    width: 100% !important;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
+
+  .leftinfo button {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .leftinfo p {
+    text-align: left;
+    padding: 1rem 0 !important;
+    font-size: 1.2rem !important;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  input {
+    width: 100% !important;
+  }
+
+  textarea {
+    width: 98% !important;
+  }
+
+  form button {
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center;
+    align-self: center !important;
+    justify-self: center !important;
+  }
+
+  .contact {
+    padding: 0 !important;
+  }
+  .contact h2 {
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .contact-nav {
+    margin-top: 1rem !important;
+  }
+
   .desktopnav {
-    display: flex !important;
-    flex-flow: column nowrap !important;
-    position: fixed !important;
-    top: 0 !important;
-    bottom: 0;
-    left: 0;
+    display: none !important;
+  }
+
+  .mobilenav {
+    position: fixed;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
     right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(255, 136, 123, 0.9);
+    font-size: 3rem;
   }
 
   header {
     height: 4vh !important;
+    background-color: rgba(255, 136, 123, 0.6);
   }
 
+  .sec1 .s1container {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
   .sec1 .box {
-    flex-flow: row wrap;
+    width: 100%;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin: 1rem !important;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid rgba(165, 165, 165, 0.6);
+  }
+  .sec1 .box:last-child {
+    border: none;
   }
 
   html {
@@ -608,11 +819,13 @@ small {
   }
 
   .hero {
-    padding-top: 5rem !important;
+    padding-top: 8rem !important;
+    padding-bottom: 5rem !important;
   }
 
   .contact-nav {
     display: flex !important;
+    justify-content: space-evenly;
     margin: 0 auto;
     margin-bottom: 2rem;
   }
@@ -628,24 +841,14 @@ small {
     flex-flow: column nowrap;
   }
 
-  .box {
-    display: flex;
-    border: 1px solid grey;
-    padding: 2rem;
-  }
-
   .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column nowrap !important;
     justify-content: space-evenly;
   }
 
   .sec2 {
     text-align: center;
-    padding: 8rem 0;
+    padding: 3rem 0;
     color: rgba(255, 255, 255, 0.884);
     background-color: #ff887b;
   }
@@ -658,18 +861,26 @@ small {
     margin: 2rem 0;
   }
   .sec2 .row {
-    width: 80% !important;
-    padding: none !important;
+    width: 90%;
     border: none !important;
+    padding: 1rem 0 2rem 0;
+    margin-bottom: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.884) !important;
-    padding-bottom: 5rem !important;
-    margin-bottom: 5rem !important;
   }
-  .sec2 .row:last-child {
-    border: none;
+  .sec2 .row p {
+    font-size: 1.5rem;
+  }
+  .sec2 .row h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .contact-form {
+    width: 100% !important;
   }
 
   .quotebox {
+    margin: 0 auto !important;
+    padding: 0 !important;
     width: 100% !important;
     height: 30vh;
   }
@@ -685,6 +896,10 @@ small {
 
   .infobox {
     width: 100% !important;
+    text-align: center !important;
+  }
+  .infobox:hover {
+    cursor: pointer !important;
   }
 
   input {
@@ -704,40 +919,50 @@ small {
     flex-direction: column;
   }
   .contact-form .flexrow input {
-    width: 95% !important;
+    width: 98% !important;
     margin: 0 auto;
     margin-top: 1rem;
   }
 
+  .contact-info {
+    margin: 0 auto;
+  }
   .contact-info .info {
     padding-bottom: 1rem !important;
   }
 
   .radiobtn {
-    width: 33% !important;
-    margin-left: 1.2rem;
+    width: 33.33% !important;
   }
 
   .s3content {
     padding-right: 0 !important;
-    text-align: center;
     flex-direction: column;
   }
   .s3content button {
     margin: 0 auto;
   }
   .s3content .flexcol {
+    width: 100%;
     order: 1;
   }
-  .s3content img {
+  .s3content .img {
     width: 90% !important;
-    margin: 0 auto;
+    margin: 1rem auto;
     padding-left: 0 !important;
   }
   .s3content .btnrow {
+    justify-content: center;
+    margin-bottom: 2rem !important;
     width: 100%;
-    text-align: center;
-    margin: 0 auto;
+  }
+
+  #hamburger-icon {
+    display: inline-block;
+  }
+
+  .mob.dropdown:hover > .mob.sm1 {
+    display: flex;
   }
 }
 
