@@ -26,6 +26,10 @@
    }
 }
 
+button {
+   outline: none;
+}
+
 .contact {
 
 
@@ -34,6 +38,7 @@
       color: $white;
       // width: 40%;
       padding: 1rem;
+      border-bottom: 1px solid rgba($grey, 0.6);
    }
    padding: 5rem;
    background-color: $baseRed;
@@ -78,6 +83,7 @@
          background-color: transparent;
          border: 1px solid rgba($white, 0.7);
          border-radius: 5px;
+         outline: none;
          &::placeholder {
             padding: 1rem;
             color: $white;

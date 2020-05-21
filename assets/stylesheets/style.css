@@ -715,23 +715,25 @@ header .desktopnav ul .homepagelink {
   border-bottom: 1px solid rgba(165, 165, 165, 0.89);
 }
 .sec3 .btnrow .rb1 {
-  border-right: 1px solid rgba(165, 165, 165, 0.89);
+  border: 1px solid rgba(165, 165, 165, 0.89);
+}
+.sec3 .btnrow .rb2 {
+  border: 1px solid rgba(165, 165, 165, 0.6);
+  border-right: 0;
 }
 .sec3 .btnrow .rb3 {
-  border-left: 1px solid rgba(165, 165, 165, 0.89);
-  border-right: 1px solid rgba(165, 165, 165, 0.89);
+  border: 1px solid rgba(165, 165, 165, 0.89);
 }
 .sec3 .btnrow button {
-  border-bottom: 1px solid rgba(165, 165, 165, 0.89);
   border-top: 1px solid rgba(165, 165, 165, 0.89) !important;
   border: 0;
   border-radius: 0;
   padding: 1rem 3rem;
   border-bottom: none;
+  outline: none;
 }
 .sec3 .s3container {
-  border: 1px solid rgba(165, 165, 165, 0.6);
-  border-top: 0;
+  padding: 1rem;
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -748,6 +750,9 @@ header .desktopnav ul .homepagelink {
 }
 .sec3 .s3content .img {
   width: 50%;
+  padding: 1rem;
+  border-right: 1px solid rgba(165, 165, 165, 0.6);
+  border-bottom: 1px solid rgba(165, 165, 165, 0.6);
 }
 .sec3 .s3content img {
   width: 100%;
@@ -759,6 +764,8 @@ header .desktopnav ul .homepagelink {
   flex-flow: column nowrap;
   width: 50%;
   padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.6);
+  border-left: 1px solid rgba(165, 165, 165, 0.6);
 }
 .sec3 .s3content .flexcol h2 {
   margin-top: 1rem;
@@ -928,6 +935,10 @@ progress::-webkit-progress-value {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+button {
+  outline: none;
+}
+
 .contact {
   padding: 5rem;
   background-color: #ff887b;
@@ -937,6 +948,7 @@ progress::-webkit-progress-value {
   border: 1px solid rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.884);
   padding: 1rem;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.6);
 }
 .contact h2 {
   font-size: 2.5rem;
@@ -972,6 +984,7 @@ progress::-webkit-progress-value {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 5px;
+  outline: none;
 }
 .contact .contact-form input::placeholder, .contact .contact-form textarea::placeholder {
   padding: 1rem;
